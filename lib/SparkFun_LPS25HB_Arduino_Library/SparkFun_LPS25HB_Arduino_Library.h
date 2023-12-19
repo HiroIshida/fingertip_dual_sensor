@@ -22,7 +22,7 @@ Owen Lyke
 #include "WProgram.h"
 #endif
 
-#include <Wire.h>
+#include <i2c_t3.h>
 
 /////////////////////////////////////
 //				Defines
@@ -178,7 +178,7 @@ public:
 
 	// Functions
 	LPS25HB(void);																  // Constructor
-	bool begin(TwoWire &wirePort = Wire, uint8_t address = LPS25HB_I2C_ADDR_DEF); // Startup routine that uses the Wire port as the default
+	bool begin(i2c_t3 &wirePort = Wire, uint8_t address = LPS25HB_I2C_ADDR_DEF); // Startup routine that uses the Wire port as the default
 
 	// Getters
 	bool isConnected();
@@ -209,7 +209,7 @@ public:
 	bool write(uint8_t reg_adr, uint8_t *pdata, uint8_t size);
 
 private:
-	TwoWire *_i2cPort; // Allows user to specify which TwoWire port to use for the connection
+	i2c_t3 *_i2cPort; // Allows user to specify which TwoWire port to use for the connection
 };
 
 #endif /* LPS25HB_H */

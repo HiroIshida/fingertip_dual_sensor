@@ -35,7 +35,7 @@ LPS25HB::LPS25HB(void)
    * The clock frequency is applied but can be changed again externally
    * @return Boolean, true if connected and false if disconnected
 */
-bool LPS25HB::begin(TwoWire &wirePort, uint8_t address)
+bool LPS25HB::begin(i2c_t3 &wirePort, uint8_t address)
 {
 	sensor_address = address; // Associate the specified I2C address with the object for later use
 
