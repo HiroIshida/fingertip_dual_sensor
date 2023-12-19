@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>fingertip_dual_sensor</name>
+  <version>0.0.0</version>
+  <description>The fingertip_dual_sensor package</description>
+
+  <license>MIT</license>
+  <maintainer email="h-ishida@todo.todo">h-ishida</maintainer>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>message_generation</build_depend>
+  <depend>rosserial_python</depend>
+  <depend>rosserial_arduino</depend>
+  <build_depend>std_msgs</build_depend>
+</package>
