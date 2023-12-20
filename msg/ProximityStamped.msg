@@ -1,0 +1,2 @@
+std_msgs/Header header
+fingertip_dual_sensor/Proximity proximity

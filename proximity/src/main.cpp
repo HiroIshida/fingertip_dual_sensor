@@ -19,14 +19,14 @@
 #include <i2c_t3.h>     // Use <i2c_t3.h> for Teensy and <Wire.h> for Arduino
 #include <math.h>
 #include <ros.h>
-#include <force_proximity_ros/ProximityStamped.h>
-#include <force_proximity_ros/ProximityArray.h>
+#include <fingertip_dual_sensor/ProximityStamped.h>
+#include <fingertip_dual_sensor/ProximityArray.h>
 #include <vector>
 
 
 /***** ROS *****/
 ros::NodeHandle  nh;
-force_proximity_ros::ProximityArray prxes_msg;
+fingertip_dual_sensor::ProximityArray prxes_msg;
 ros::Publisher prxes_pub("proximities", &prxes_msg);
 
 
@@ -140,7 +140,7 @@ void loop()
 {
   auto time = millis();
   auto tmp = readProximity();
-  force_proximity_ros::Proximity proximities[2];
+  fingertip_dual_sensor::Proximity proximities[2];
   for(int i = 0; i < 2; i++){
     proximity_value[i] = tmp[i];
     average_value[i] = EA * proximity_value[i] + (1 - EA) * average_value[i];
