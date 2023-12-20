@@ -1,6 +1,6 @@
 ### Requirement
 ```
-pip3 instlla platformio
+pip3 install platformio
 ```
 
 ### Installation
